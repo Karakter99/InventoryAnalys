@@ -1,0 +1,369 @@
+{
+  "config": "{\"version\":\"5.53\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU02\",\"version\":\"5.53\",\"type\":2},\"customTheme\":{\"name\":\"AccessibleCityPark\",\"version\":\"5.53\",\"type\":2}},\"activeSectionIndex\":3,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "AccessibleCityPark",
+            "path": "BuiltInThemes/AccessibleCityPark.json",
+            "type": 201
+          },
+          {
+            "name": "CY24SU02",
+            "path": "BaseThemes/CY24SU02.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Page 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"3b643c6fdeb6ad18990d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":618.6018237082067,\"y\":0,\"z\":1000,\"width\":643.8905775075988,\"height\":719.7568389057751,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"hundredPercentStackedColumnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Orders.Country\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(Orders.Quantity)\"}],\"Series\":[{\"queryRef\":\"categories.category\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"o\",\"Entity\":\"Orders\",\"Type\":0},{\"Name\":\"c\",\"Entity\":\"categories\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"Country\"},\"Name\":\"Orders.Country\",\"NativeReferenceName\":\"Country\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"Quantity\"}},\"Function\":0},\"Name\":\"Sum(Orders.Quantity)\",\"NativeReferenceName\":\"Sum of Quantity\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"category\"},\"Name\":\"categories.category\",\"NativeReferenceName\":\"category\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"Quantity\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 719.76,
+          "width": 643.89,
+          "x": 618.60,
+          "y": 0.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"99a80cae4162a3ee06c9\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":555.3799392097264,\"height\":719.7568389057751,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Stock.Description\"},{\"queryRef\":\"Sum(Orders.Quantity)\"},{\"queryRef\":\"Sum(Stock.Retail_Price)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"Stock\",\"Type\":0},{\"Name\":\"o\",\"Entity\":\"Orders\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Description\"},\"Name\":\"Stock.Description\",\"NativeReferenceName\":\"Description\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"Quantity\"}},\"Function\":0},\"Name\":\"Sum(Orders.Quantity)\",\"NativeReferenceName\":\"Sum of Quantity\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Retail_Price\"}},\"Function\":1},\"Name\":\"Sum(Stock.Retail_Price)\",\"NativeReferenceName\":\"Average of Retail_Price\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Description\"}}}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 719.76,
+          "width": 555.38,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Management solutions",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection14776cae04e29a055101",
+      "ordinal": 8,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"28530a858d550b417d75\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":345.7142857142857,\"z\":0,\"width\":662.8571428571429,\"height\":358.5714285714286,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Stock.Description\"},{\"queryRef\":\"Sum(Turnover.Inventory_turnover)\"},{\"queryRef\":\"Sum(Stock.Quantity_2021)\"},{\"queryRef\":\"ABC.ABC_Class\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"Turnover\",\"Type\":0},{\"Name\":\"s\",\"Entity\":\"Stock\",\"Type\":0},{\"Name\":\"a\",\"Entity\":\"ABC\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Inventory_turnover\"}},\"Function\":0},\"Name\":\"Sum(Turnover.Inventory_turnover)\",\"NativeReferenceName\":\"Turnover\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Quantity_2021\"}},\"Function\":0},\"Name\":\"Sum(Stock.Quantity_2021)\",\"NativeReferenceName\":\"Quantity_2021\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Description\"},\"Name\":\"Stock.Description\",\"NativeReferenceName\":\"Description\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"ABC_Class\"},\"Name\":\"ABC.ABC_Class\",\"NativeReferenceName\":\"Class\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Inventory_turnover\"}},\"Function\":0}}}]},\"columnProperties\":{\"Sum(Turnover.Inventory_turnover)\":{\"displayName\":\"Turnover\"},\"Sum(Stock.Quantity_2021)\":{\"displayName\":\"Quantity_2021\"},\"ABC.ABC_Class\":{\"displayName\":\"Class\"}},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 358.57,
+          "width": 662.86,
+          "x": 0.00,
+          "y": 345.71,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"2f9f6b20000426592431\",\"layouts\":[{\"id\":0,\"position\":{\"x\":734.2857142857143,\"y\":321.42857142857144,\"z\":4,\"width\":545.7142857142858,\"height\":398.5714285714286,\"tabOrder\":4}}],\"singleVisual\":{\"visualType\":\"stackedAreaChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Sum(ABC.CP_revenue)\"}],\"Category\":[{\"queryRef\":\"ABC.Rank\",\"active\":true}],\"Series\":[{\"queryRef\":\"ABC.ABC_Class\"}],\"Tooltips\":[{\"queryRef\":\"Min(ABC.Description)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"ABC\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"CP_revenue\"}},\"Function\":1},\"Name\":\"Sum(ABC.CP_revenue)\",\"NativeReferenceName\":\"Average of CP_revenue\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Rank\"},\"Name\":\"ABC.Rank\",\"NativeReferenceName\":\"Sum of Rank\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"ABC_Class\"},\"Name\":\"ABC.ABC_Class\",\"NativeReferenceName\":\"Count of ABC_Class\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Description\"}},\"Function\":3},\"Name\":\"Min(ABC.Description)\",\"NativeReferenceName\":\"First Description\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"CP_revenue\"}},\"Function\":1}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"lineStyles\":[{\"properties\":{\"areaMatchStrokeColor\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"areaColor\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#FFFFFF'\"}}}}}}}],\"valueAxis\":[{\"properties\":{\"gridlineColor\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#C8C6C4'\"}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 398.57,
+          "width": 545.71,
+          "x": 734.29,
+          "y": 321.43,
+          "z": 4.00
+        },
+        {
+          "config": "{\"name\":\"518bb1867bac89b0b329\",\"layouts\":[{\"id\":0,\"position\":{\"x\":511.42857142857144,\"y\":57.142857142857146,\"z\":1,\"width\":172.85714285714286,\"height\":118.57142857142858,\"tabOrder\":1}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Min(Turnover.SKU-ID)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"Turnover\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"SKU-ID\"}},\"Function\":2},\"Name\":\"Min(Turnover.SKU-ID)\",\"NativeReferenceName\":\"Count of SKU-ID\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"SKU-ID\"}},\"Function\":2}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Number of Item'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 118.57,
+          "width": 172.86,
+          "x": 511.43,
+          "y": 57.14,
+          "z": 1.00
+        },
+        {
+          "config": "{\"name\":\"5d8028a40b581489cadc\",\"layouts\":[{\"id\":0,\"position\":{\"x\":728.5714285714287,\"y\":51.42857142857143,\"z\":2,\"width\":221.42857142857144,\"height\":108.57142857142858,\"tabOrder\":2}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(Stock.TotalCSGO2021)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"Stock\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"TotalCSGO2021\"}},\"Function\":0},\"Name\":\"Sum(Stock.TotalCSGO2021)\",\"NativeReferenceName\":\"Sum of TotalCSGO2021\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"TotalCSGO2021\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Total CSGO 2021'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 108.57,
+          "width": 221.43,
+          "x": 728.57,
+          "y": 51.43,
+          "z": 2.00
+        },
+        {
+          "config": "{\"name\":\"60a5fdb4456ca03d7201\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":5,\"width\":425.45454545454544,\"height\":320.9090909090909,\"tabOrder\":5}}],\"singleVisual\":{\"visualType\":\"clusteredColumnChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Sum(Stock.Quantity_2021)\"}],\"Category\":[{\"queryRef\":\"ABC.ABC_Class\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"Stock\",\"Type\":0},{\"Name\":\"a\",\"Entity\":\"ABC\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Quantity_2021\"}},\"Function\":0},\"Name\":\"Sum(Stock.Quantity_2021)\",\"NativeReferenceName\":\"Sum of Quantity_2021\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"ABC_Class\"},\"Name\":\"ABC.ABC_Class\",\"NativeReferenceName\":\"ABC_Class\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Quantity_2021\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryAxis\":[{\"properties\":{\"labelColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}}}}],\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#74B573'\"}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 320.91,
+          "width": 425.45,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 5.00
+        },
+        {
+          "config": "{\"name\":\"7ed7b42054603ebe00b0\",\"layouts\":[{\"id\":0,\"position\":{\"x\":974.2857142857143,\"y\":50,\"z\":3,\"width\":220,\"height\":110,\"tabOrder\":3}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(Turnover.Inventory_turnover)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"Turnover\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Inventory_turnover\"}},\"Function\":1},\"Name\":\"Sum(Turnover.Inventory_turnover)\",\"NativeReferenceName\":\"Average of Inventory_turnover\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Inventory_turnover\"}},\"Function\":1}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 110.00,
+          "width": 220.00,
+          "x": 974.29,
+          "y": 50.00,
+          "z": 3.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Sales by Year",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection235c166f466042204e4b",
+      "ordinal": 2,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"1fefeaf237edd1d99a0b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":364.74164133738606,\"height\":655.5623100303951,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Orders.Year\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(Orders.Quantity)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"o\",\"Entity\":\"Orders\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"Year\"},\"Name\":\"Orders.Year\",\"NativeReferenceName\":\"Average of Year\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"Quantity\"}},\"Function\":0},\"Name\":\"Sum(Orders.Quantity)\",\"NativeReferenceName\":\"Sum of Quantity1\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"Quantity\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 655.56,
+          "width": 364.74,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"9e15dd09b858ec47cea0\",\"layouts\":[{\"id\":0,\"position\":{\"x\":398.7841945288754,\"y\":0,\"z\":1000,\"width\":881.2158054711247,\"height\":719.7568389057751,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"barChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Sum(Stock.Quantity_2021)\"}],\"Category\":[{\"queryRef\":\"Stock.Description\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"Stock\",\"Type\":0}],\"Select\":[{\"Arithmetic\":{\"Left\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Quantity_2021\"}},\"Function\":0}},\"Right\":{\"ScopedEval\":{\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Quantity_2021\"}},\"Function\":0}},\"Scope\":[]}},\"Operator\":3},\"Name\":\"Sum(Stock.Quantity_2021)\",\"NativeReferenceName\":\"%GT Sum of Quantity_2021\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Description\"},\"Name\":\"Stock.Description\",\"NativeReferenceName\":\"Description\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Arithmetic\":{\"Left\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Quantity_2021\"}},\"Function\":0}},\"Right\":{\"ScopedEval\":{\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Quantity_2021\"}},\"Function\":0}},\"Scope\":[]}},\"Operator\":3}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[{\"expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Stock\"}},\"Property\":\"Quantity_2021\"}},\"Function\":0}},\"type\":\"Advanced\",\"howCreated\":1,\"isHiddenInViewMode\":false}]",
+          "height": 719.76,
+          "width": 881.22,
+          "x": 398.78,
+          "y": 0.00,
+          "z": 1000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Control Decesions",
+      "displayOption": 1,
+      "filters": "[{\"name\":\"Filtera424fba9ce1d15025ad1\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"ABC\"}},\"Property\":\"ABC_Class\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"ABC\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"ABC_Class\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'B [Median Value]'\"}}]]}}}]},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{}}]",
+      "height": 720.00,
+      "name": "ReportSection677541454e7cae050c7c",
+      "ordinal": 7,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"4626eefe9b20a9b0b8d5\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":409.99999999999994,\"z\":0,\"width\":533.6363636363636,\"height\":310,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Stock.Description\"},{\"queryRef\":\"Sum(Turnover.Inventory_turnover)\"},{\"queryRef\":\"Sum(Stock.Quantity_2021)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"Turnover\",\"Type\":0},{\"Name\":\"s\",\"Entity\":\"Stock\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Inventory_turnover\"}},\"Function\":0},\"Name\":\"Sum(Turnover.Inventory_turnover)\",\"NativeReferenceName\":\"Sum of Inventory_turnover\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Quantity_2021\"}},\"Function\":0},\"Name\":\"Sum(Stock.Quantity_2021)\",\"NativeReferenceName\":\"Sum of Quantity_2021\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Description\"},\"Name\":\"Stock.Description\",\"NativeReferenceName\":\"Description\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Description\"}}}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 310.00,
+          "width": 533.64,
+          "x": 0.00,
+          "y": 410.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"c70a61598c3bcae69a40\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1,\"y\":0,\"z\":1001,\"width\":1112,\"height\":410,\"tabOrder\":1001}}],\"singleVisual\":{\"visualType\":\"map\",\"projections\":{\"Size\":[{\"queryRef\":\"Sum(Orders.Quantity)\"}],\"Category\":[{\"queryRef\":\"Orders.Country\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"o\",\"Entity\":\"Orders\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"Quantity\"}},\"Function\":0},\"Name\":\"Sum(Orders.Quantity)\",\"NativeReferenceName\":\"Sum of Quantity\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"Country\"},\"Name\":\"Orders.Country\",\"NativeReferenceName\":\"Country\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[{\"name\":\"Filterc1840a6e609ae195aa27\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"ABC\"}},\"Property\":\"ABC_Class\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"ABC\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"ABC_Class\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'B [Median Value]'\"}}]]}}}]},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{}}]",
+          "height": 410.00,
+          "width": 1112.00,
+          "x": 1.00,
+          "y": 0.00,
+          "z": 1001.00
+        },
+        {
+          "config": "{\"name\":\"d85fdc79b285521b1b2c\",\"layouts\":[{\"id\":0,\"position\":{\"x\":622,\"y\":410,\"z\":1000,\"width\":468,\"height\":310,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Stock.Description\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(Stock.Revenue_2021)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"Stock\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Description\"},\"Name\":\"Stock.Description\",\"NativeReferenceName\":\"Description\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Revenue_2021\"}},\"Function\":0},\"Name\":\"Sum(Stock.Revenue_2021)\",\"NativeReferenceName\":\"Sum of Revenue_2021\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Revenue_2021\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 310.00,
+          "width": 468.00,
+          "x": 622.00,
+          "y": 410.00,
+          "z": 1000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Prelimanary result",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection68e7aeebc0a46c961ad7",
+      "ordinal": 4,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"219302128c221d973902\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":340.65428824049513,\"z\":2000,\"width\":712.9973474801061,\"height\":379.13351016799294,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Sum(Stock.percent_revenue_2020)\"},{\"queryRef\":\"Sum(Stock.percent_revenue_2021)\"}],\"Category\":[{\"queryRef\":\"Stock.Description\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"Stock\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"percent_revenue_2020\"}},\"Function\":0},\"Name\":\"Sum(Stock.percent_revenue_2020)\",\"NativeReferenceName\":\"Sum of percent_revenue_2020\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"percent_revenue_2021\"}},\"Function\":0},\"Name\":\"Sum(Stock.percent_revenue_2021)\",\"NativeReferenceName\":\"Sum of percent_revenue_2021\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Description\"},\"Name\":\"Stock.Description\",\"NativeReferenceName\":\"Description\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"percent_revenue_2020\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Percent of Total Revenue'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 379.13,
+          "width": 713.00,
+          "x": 0.00,
+          "y": 340.65,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"864f2829996b66804d24\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":712.9973474801061,\"height\":306.70203359858533,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Stock.Description\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(Stock.2020_units_sold)\"},{\"queryRef\":\"Sum(Stock.Quantity_2021)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"Stock\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Description\"},\"Name\":\"Stock.Description\",\"NativeReferenceName\":\"Description\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"2020_units_sold\"}},\"Function\":0},\"Name\":\"Sum(Stock.2020_units_sold)\",\"NativeReferenceName\":\"Sum of 2020_units_sold\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Quantity_2021\"}},\"Function\":0},\"Name\":\"Sum(Stock.Quantity_2021)\",\"NativeReferenceName\":\"Sum of Quantity_2021\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"2020_units_sold\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Inventory stock by year'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 306.70,
+          "width": 713.00,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"df8b745d1ba76b45ae00\",\"layouts\":[{\"id\":0,\"position\":{\"x\":727.709991158267,\"y\":0,\"z\":1000,\"width\":552.290008841733,\"height\":719.7877984084881,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Turnover.Description\"},{\"queryRef\":\"Sum(Turnover.Inventory_turnover)\"},{\"queryRef\":\"ABC.ABC_Class\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"Turnover\",\"Type\":0},{\"Name\":\"a\",\"Entity\":\"ABC\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Description\"},\"Name\":\"Turnover.Description\",\"NativeReferenceName\":\"Description\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Inventory_turnover\"}},\"Function\":0},\"Name\":\"Sum(Turnover.Inventory_turnover)\",\"NativeReferenceName\":\"Sum of Inventory_turnover\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"ABC_Class\"},\"Name\":\"ABC.ABC_Class\",\"NativeReferenceName\":\"ABC_Class\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 719.79,
+          "width": 552.29,
+          "x": 727.71,
+          "y": 0.00,
+          "z": 1000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Inspecting Categories",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSectionc55ee117c3b0e47e7a07",
+      "ordinal": 6,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"1fadb4272a6e1968e0a0\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":560,\"height\":360,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"clusteredColumnChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Sum(Stock.Quantity_2021)\"}],\"Category\":[{\"queryRef\":\"ABC.ABC_Class\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"Stock\",\"Type\":0},{\"Name\":\"a\",\"Entity\":\"ABC\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Quantity_2021\"}},\"Function\":0},\"Name\":\"Sum(Stock.Quantity_2021)\",\"NativeReferenceName\":\"Sum of Quantity_2021\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"ABC_Class\"},\"Name\":\"ABC.ABC_Class\",\"NativeReferenceName\":\"ABC_Class\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Quantity_2021\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 360.00,
+          "width": 560.00,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"7db27e42ea807096652c\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":360,\"z\":1000,\"width\":1280,\"height\":360,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"treemap\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(Turnover.Inventory_turnover)\"}],\"Group\":[{\"queryRef\":\"categories.category\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"Turnover\",\"Type\":0},{\"Name\":\"c\",\"Entity\":\"categories\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Inventory_turnover\"}},\"Function\":1},\"Name\":\"Sum(Turnover.Inventory_turnover)\",\"NativeReferenceName\":\"Average of Inventory_turnover\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"category\"},\"Name\":\"categories.category\",\"NativeReferenceName\":\"category\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 360.00,
+          "width": 1280.00,
+          "x": 0.00,
+          "y": 360.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"e5bf347517e0060395d1\",\"layouts\":[{\"id\":0,\"position\":{\"x\":575.7142857142858,\"y\":0,\"z\":2000,\"width\":704.2857142857143,\"height\":384.28571428571433,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"pieChart\",\"projections\":{\"Category\":[{\"queryRef\":\"categories.category\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(Stock.Revenue_2021)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"categories\",\"Type\":0},{\"Name\":\"s\",\"Entity\":\"Stock\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"category\"},\"Name\":\"categories.category\",\"NativeReferenceName\":\"category\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Revenue_2021\"}},\"Function\":0},\"Name\":\"Sum(Stock.Revenue_2021)\",\"NativeReferenceName\":\"Sum of Revenue_2021\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Revenue_2021\"}},\"Function\":0}}}]},\"autoSelectVisualType\":false,\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 384.29,
+          "width": 704.29,
+          "x": 575.71,
+          "y": 0.00,
+          "z": 2000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "CSGO Revenue and Profit",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSectiondc1180103bde5850c3c0",
+      "ordinal": 1,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"508f740a751e7889eee8\",\"layouts\":[{\"id\":0,\"position\":{\"x\":580,\"y\":0,\"z\":1000,\"width\":700,\"height\":719.9999999999999,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Category\":[{\"queryRef\":\"categories.category\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(Stock.Profit_2020)\"},{\"queryRef\":\"Sum(Stock.Revenue_2020)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"categories\",\"Type\":0},{\"Name\":\"s\",\"Entity\":\"Stock\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"category\"},\"Name\":\"categories.category\",\"NativeReferenceName\":\"category\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Profit_2020\"}},\"Function\":0},\"Name\":\"Sum(Stock.Profit_2020)\",\"NativeReferenceName\":\"Sum of Profit_2020\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Revenue_2020\"}},\"Function\":0},\"Name\":\"Sum(Stock.Revenue_2020)\",\"NativeReferenceName\":\"Sum of Revenue_2020\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Profit_2020\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#74B573'\"}}}}}},\"selector\":{\"metadata\":\"Sum(Stock.Profit_2020)\"}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#4D724D'\"}}}}}},\"selector\":{\"metadata\":\"Sum(Stock.Revenue_2020)\"}}]}}}",
+          "filters": "[]",
+          "height": 720.00,
+          "width": 700.00,
+          "x": 580.00,
+          "y": 0.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"eff9d280325301a2c559\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":534.5454545454545,\"height\":719.9999999999999,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"barChart\",\"projections\":{\"Category\":[{\"queryRef\":\"categories.category\",\"active\":true}],\"Y\":[{\"queryRef\":\"CountNonNull(Costs.CSGO)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"categories\",\"Type\":0},{\"Name\":\"c1\",\"Entity\":\"Costs\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"category\"},\"Name\":\"categories.category\",\"NativeReferenceName\":\"category\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c1\"}},\"Property\":\"CSGO\"}},\"Function\":1},\"Name\":\"CountNonNull(Costs.CSGO)\",\"NativeReferenceName\":\"Average of CSGO\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c1\"}},\"Property\":\"CSGO\"}},\"Function\":1}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 720.00,
+          "width": 534.55,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{\"objects\":{\"outspacePane\":[{\"properties\":{\"width\":{\"expr\":{\"Literal\":{\"Value\":\"196L\"}}}}}]}}",
+      "displayName": "Revenue and Class",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSectiondfc298da3d71d90e7573",
+      "ordinal": 3,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"73967c244775b0374140\",\"layouts\":[{\"id\":0,\"position\":{\"x\":715.6363636363636,\"y\":0,\"z\":1000,\"width\":564.3636363636364,\"height\":485.8181818181818,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"ABC.Description\"},{\"queryRef\":\"ABC.ABC_Class\"},{\"queryRef\":\"Sum(ABC.percent_revenue_2021)\"},{\"queryRef\":\"Sum(ABC.Revenue_2021)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"ABC\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"ABC_Class\"},\"Name\":\"ABC.ABC_Class\",\"NativeReferenceName\":\"ABC_Class\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"percent_revenue_2021\"}},\"Function\":0},\"Name\":\"Sum(ABC.percent_revenue_2021)\",\"NativeReferenceName\":\"Percent\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Revenue_2021\"}},\"Function\":0},\"Name\":\"Sum(ABC.Revenue_2021)\",\"NativeReferenceName\":\"Sum\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Description\"},\"Name\":\"ABC.Description\",\"NativeReferenceName\":\"Description\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"ABC_Class\"}}}]},\"columnProperties\":{\"Sum(ABC.percent_revenue_2021)\":{\"displayName\":\"Percent\"},\"Sum(ABC.Revenue_2021)\":{\"displayName\":\"Sum\"}},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 485.82,
+          "width": 564.36,
+          "x": 715.64,
+          "y": 0.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"ef09d1a1bc2859995ced\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":629.3333333333334,\"height\":720.4848484848485,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Stock.Description\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(Stock.percent_revenue_2020)\"},{\"queryRef\":\"Sum(Stock.percent_revenue_2021)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"Stock\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Description\"},\"Name\":\"Stock.Description\",\"NativeReferenceName\":\"Description\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"percent_revenue_2020\"}},\"Function\":0},\"Name\":\"Sum(Stock.percent_revenue_2020)\",\"NativeReferenceName\":\"Sum of percent_revenue_2020\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"percent_revenue_2021\"}},\"Function\":0},\"Name\":\"Sum(Stock.percent_revenue_2021)\",\"NativeReferenceName\":\"Sum of percent_revenue_2021\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"percent_revenue_2020\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 720.48,
+          "width": 629.33,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"f22ae754170ab9582b12\",\"layouts\":[{\"id\":0,\"position\":{\"x\":735.4545454545454,\"y\":521.8181818181818,\"z\":2000,\"width\":238.18181818181816,\"height\":166.36363636363635,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(ABC.Revenue_2021)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"ABC\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Revenue_2021\"}},\"Function\":0},\"Name\":\"Sum(ABC.Revenue_2021)\",\"NativeReferenceName\":\"Sum of Revenue_2021\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Revenue_2021\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 166.36,
+          "width": 238.18,
+          "x": 735.45,
+          "y": 521.82,
+          "z": 2000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Smart Purchasing",
+      "displayOption": 1,
+      "filters": "[{\"name\":\"Filter12d806605eadd02b974b\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"ABC\"}},\"Property\":\"ABC_Class\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"ABC\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"ABC_Class\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'A [High Value]'\"}}]]}}}]},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{}}]",
+      "height": 720.00,
+      "name": "ReportSectionf4afe0af8594516aea82",
+      "ordinal": 5,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"467dcd42ae2c0640061b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":580,\"height\":720,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Stock.Description\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(Stock.Revenue_2021)\"},{\"queryRef\":\"Sum(Stock.TotalCSGO2021)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"Stock\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Description\"},\"Name\":\"Stock.Description\",\"NativeReferenceName\":\"Description\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Revenue_2021\"}},\"Function\":0},\"Name\":\"Sum(Stock.Revenue_2021)\",\"NativeReferenceName\":\"Sum of Revenue_2021\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"TotalCSGO2021\"}},\"Function\":0},\"Name\":\"Sum(Stock.TotalCSGO2021)\",\"NativeReferenceName\":\"Sum of TotalCSGO2021\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Revenue_2021\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 720.00,
+          "width": 580.00,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"f0232ea109d2a6a8c200\",\"layouts\":[{\"id\":0,\"position\":{\"x\":700,\"y\":0,\"z\":1000,\"width\":580,\"height\":720,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Sum(Stock.CSGRRevenueratio)\"}],\"Category\":[{\"queryRef\":\"Stock.Description\",\"active\":true}],\"Tooltips\":[{\"queryRef\":\"Min(Stock.SKU-ID)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"Stock\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"CSGRRevenueratio\"}},\"Function\":0},\"Name\":\"Sum(Stock.CSGRRevenueratio)\",\"NativeReferenceName\":\"Sum of CSGRRevenueratio\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Description\"},\"Name\":\"Stock.Description\",\"NativeReferenceName\":\"Description\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"SKU-ID\"}},\"Function\":3},\"Name\":\"Min(Stock.SKU-ID)\",\"NativeReferenceName\":\"First SKU-ID\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"CSGRRevenueratio\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 720.00,
+          "width": 580.00,
+          "x": 700.00,
+          "y": 0.00,
+          "z": 1000.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ],
+  "theme": "AccessibleCityPark"
+}
